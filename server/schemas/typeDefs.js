@@ -1,6 +1,6 @@
 const { gql } = require("apollo-server-express");
 
-
+// ！means that the field is non-nullable.
 const typeDefs = gql`
   type User {
     _id: ID
@@ -10,10 +10,10 @@ const typeDefs = gql`
     savedBooks: [Book]
   }
   type Book {
-    bookId: String
+    bookId: String!
     authors: [String]
     description: String
-    title: String
+    title: String!
     image: String
     link: String
   }
@@ -22,10 +22,10 @@ const typeDefs = gql`
     user: User
   }
   input BookInput {
-    bookId: String
+    bookId: String!
     authors: [String]
     description: String
-    title: String
+    title: String!
     image: String
     link: String
   }
@@ -33,10 +33,10 @@ const typeDefs = gql`
     me: User
   }
   type Mutation {
-    login(email: String, password: String): Auth
-    addUser(username: String, email: String, password: String): Auth
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     saveBook(input: BookInput): User
-    removeBook(bookId: String): User
+    removeBook(bookId: String!): User
   }
 `;
 
