@@ -3,6 +3,9 @@
   [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
   ## Description
+  Link to app deployed on Heroku:
+  https://mern-book-search.herokuapp.com/
+
   This project utilizes Google Books API search engine built with a GraphQL API built with Apollo Server. The app was built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API.
 
   ## Table of Content
